@@ -131,6 +131,7 @@ input[type=submit], #back {
     border-radius: 5px;
     cursor: pointer;
     outline: none;
+	border: none;
     transition: .2s ease-in-out;
 }
 
