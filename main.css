@@ -7,16 +7,16 @@
 body {
     width: 100%;
     height: 100vh;
-    font-size: 1.4em;
+    font-size: 1.3em;
 }
 
 main {
     width: 100%;
     height: 100vh;
-    /* background-color: rgba(255, 229, 168, .3); */
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--main-background-color);
     font-family: 'Poppins', sans-serif;
 }
 
@@ -29,10 +29,17 @@ main {
 
 .title_header {
     width: 100%;
-    font-size: 1.05em;
     text-align: center;
     margin-bottom: 10px;
+}
+
+.title_header h2 {
+    font-size: 1.05em;
     font-weight: bold;
+}
+
+.title_header p {
+    font-size: 0.9em;
 }
 
 #main-form, #main_div {
@@ -47,37 +54,44 @@ main {
     padding: 13px 0;
 }
 
-.col40 {
-    width: 40%;
+.col-left {
+    width: var(--col-left-width);
 }
 
-.col60 {
-    width: 60%;
+.col-right {
+    width: var(--col-right-width);
 }
 
-.r_p {
+.col-center {
+    width: 100%;
+}
+
+.right {
     text-align: right;
 }
 
-.r_p span {
-    color:  rgb(255, 167, 51);
+.right span {
+    color:  var(--highlight-color);
 }
 
 input[type=text],
-input[type=number] {
+input[type=number],
+input[type=date]{
     width: 100%;
     padding: 5px 10px;
-    background-color: rgb(220, 220, 220);
-    font-size: 1em;
+    background-color: var(--input-background-color);
+    text-align: var(--input-text-align);
     border: none;
+    border-bottom: 3px solid var(--input-background-color);
     outline: none;
     border-radius: 5px;
     transition: .2s ease-in-out;
 }
 
 input[type=text]:focus,
-input[type=number]:focus {
-    /* border-bottom: 3px solid rgba(255, 167, 51, 1); */
+input[type=number]:focus,
+input[type=date]:focus{
+    border-bottom: 3px solid var(--input-bottom-border-color);
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -88,17 +102,16 @@ input[type=number]::-webkit-outer-spin-button {
 
 input[type=submit], #back {
     width: 100%;
-    /* background-color: rgb(255, 167, 51); */
-    color: black;
+    color: var(--submit-font-color);
+    background-color: var(--submit-background-color);
     padding: 15px 0;
     font-size: 1em;
-    /* border: 2px solid rgb(255, 167, 51); */
     border-radius: 5px;
     cursor: pointer;
     outline: none;
     transition: .2s ease-in-out;
 }
 
-input[type=submit]:hover {
-    /* background-color: rgb(255, 180, 82); */
+input[type=submit]:hover, #back:hover {
+    background-color: var(--submit-hover-background-color);
 }
