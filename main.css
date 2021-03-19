@@ -9,7 +9,12 @@
     --container-shadow-color: value;
     --col-left-width: value;
     --col-right-width: value;
-    --highlight-color: value;
+    --highlight-font-color: value;
+    --highlight-background-color: value;
+    --highlight-padding;
+    --highlight-border-radius;
+    --error-font-color;
+    --success-font-color;
     --input-background-color: value;
     --input-text-align: value;
     --input-font-size: value;
@@ -92,12 +97,19 @@ main {
     width: 100%;
 }
 
-.right {
-    text-align: right;
+.highlighted {
+    background-color: var(--highlight-background-color);
+    color: var(--highlight-font-color);
+    padding: var(--highlight-padding);
+    border-radius: var(--highlight-border-radius);
 }
 
-.right span {
-    color:  var(--highlight-color);
+.error {
+    color: var(--error-font-color);
+}
+
+.success {
+    color: var(--success-font-color);    
 }
 
 input[type=text],
