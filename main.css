@@ -79,10 +79,12 @@ main {
 
 .col-left {
     width: var(--col-left-width);
+	margin-right: 5px;
 }
 
 .col-right {
     width: var(--col-right-width);
+	margin-left: 5px;
 }
 
 .col-center {
