@@ -79,12 +79,12 @@ main {
 
 .col-left {
     width: var(--col-left-width);
-	margin-right: 5px;
+    margin-right: 5px;
 }
 
 .col-right {
     width: var(--col-right-width);
-	margin-left: 5px;
+    margin-left: 5px;
 }
 
 .col-center {
@@ -141,6 +141,8 @@ input[type=reset],
     transition: .2s ease-in-out;
 }
 
-input[type=submit]:hover, #back:hover {
+input[type=submit]:hover,
+input[type=reset]:hover,
+#back:hover {
     background-color: var(--submit-hover-background-color);
 }
